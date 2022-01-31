@@ -1,0 +1,291 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FC6      FC6 'HEXACYANOFERRATE(3-)                ' non-polymer        13  13 .
+#
+# ---   LIST OF LINKS ---
+#
+data_link_list
+loop_
+_chem_link.id
+_chem_link.comp_id_1
+_chem_link.mod_id_1
+_chem_link.group_comp_1
+_chem_link.comp_id_2
+_chem_link.mod_id_2
+_chem_link.group_comp_2
+_chem_link.name
+TRP-HIS  TRP      TRPmod1  .        HIS      HISmod1  .
+ TRP-HIS
+#
+# ---   LIST OF MODIFICATIONS ---
+#
+data_mod_list
+loop_
+_chem_mod.id
+_chem_mod.name
+_chem_mod.comp_id
+_chem_mod.group_id
+TRPmod1                                        TRYPTOPHAN TRP      .
+HISmod1                                         HISTIDINE HIS      .
+#
+# --- DESCRIPTION OF LINKS ---
+#
+data_link_TRP-HIS
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ TRP-HIS  1 CD1     2 NE2       single      1.410    0.020
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ TRP-HIS  1 CD1     2 NE2     2 CD2     135.154    3.000
+ TRP-HIS  1 CD1     2 NE2     2 CE1     114.069    3.000
+ TRP-HIS  1 NE1     1 CD1     2 NE2     109.284    3.000
+ TRP-HIS  1 CG      1 CD1     2 NE2     136.204    3.000
+loop_
+_chem_link_plane.link_id
+_chem_link_plane.plane_id
+_chem_link_plane.atom_comp_id
+_chem_link_plane.atom_id
+_chem_link_plane.dist_esd
+ TRP-HIS    plane1            1 CB        0.010
+ TRP-HIS    plane1            1 CG        0.010
+ TRP-HIS    plane1            1 CD1       0.010
+ TRP-HIS    plane1            1 NE1       0.010
+ TRP-HIS    plane1            1 CD2       0.010
+ TRP-HIS    plane1            1 CE2       0.010
+ TRP-HIS    plane1            1 CZ2       0.010
+ TRP-HIS    plane1            1 CH2       0.010
+ TRP-HIS    plane1            1 CE3       0.010
+ TRP-HIS    plane1            1 CZ3       0.010
+ TRP-HIS    plane1            2 NE2       0.010
+ TRP-HIS    plane2            1 CD1       0.010
+ TRP-HIS    plane2            2 CB        0.010
+ TRP-HIS    plane2            2 CG        0.010
+ TRP-HIS    plane2            2 ND1       0.010
+ TRP-HIS    plane2            2 CE1       0.010
+ TRP-HIS    plane2            2 CD2       0.010
+ TRP-HIS    plane2            2 NE2       0.010
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FC6
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FC6           N11    N    NS        0.000      0.000    0.000    0.000
+ FC6           C11    C    CSP       0.000     -0.022    0.612    0.991
+ FC6           FE2    FE   FE        0.000      0.096    1.633    2.504
+ FC6           C24    C    CSP       0.000      0.244    2.638    4.028
+ FC6           N24    N    NS        0.000      0.455    3.256    5.011
+ FC6           C21    C    CSP       0.000      0.239    0.097    3.485
+ FC6           N25    N    NS        0.000      0.485   -0.842    4.143
+ FC6           C22    C    CSP       0.000     -1.728    1.579    2.681
+ FC6           N22    N    NS        0.000     -2.883    1.427    2.803
+ FC6           C26    C    CSP       0.000      1.916    1.640    2.387
+ FC6           N21    N    NS        0.000      3.062    1.515    2.393
+ FC6           C23    C    CSP       0.000     -0.081    3.078    1.392
+ FC6           N23    N    NS        0.000     -0.130    4.041    0.701
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FC6      N11    C11    .      .
+ FC6      C11    FE2    N11    .
+ FC6      FE2    C23    C26    .
+ FC6      C24    FE2    N24    .
+ FC6      N24    C24    .      .
+ FC6      C21    FE2    N25    .
+ FC6      N25    C21    .      .
+ FC6      C22    FE2    N22    .
+ FC6      N22    C22    .      .
+ FC6      C26    FE2    N21    .
+ FC6      N21    C26    .      END
+ FC6      C23    N23    FE2    .
+ FC6      N23    n/a    C23    START
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FC6      N24    C24       triple      1.158    0.020
+ FC6      C24    FE2       single      1.930    0.020
+ FC6      C21    FE2       single      1.930    0.020
+ FC6      C22    FE2       single      1.930    0.020
+ FC6      C26    FE2       single      1.930    0.020
+ FC6      C23    FE2       single      1.930    0.020
+ FC6      FE2    C11       single      1.930    0.020
+ FC6      N25    C21       triple      1.158    0.020
+ FC6      N22    C22       triple      1.158    0.020
+ FC6      N21    C26       triple      1.158    0.020
+ FC6      N23    C23       triple      1.158    0.020
+ FC6      C11    N11       triple      1.158    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FC6      N11    C11    FE2     180.000    3.000
+ FC6      C11    FE2    C24     180.000    3.000
+ FC6      C11    FE2    C21      90.000    3.000
+ FC6      C11    FE2    C22      90.000    3.000
+ FC6      C11    FE2    C26      90.000    3.000
+ FC6      C11    FE2    C23      90.000    3.000
+ FC6      C24    FE2    C21      90.000    3.000
+ FC6      C24    FE2    C22      90.000    3.000
+ FC6      C21    FE2    C22      90.000    3.000
+ FC6      C24    FE2    C26      90.000    3.000
+ FC6      C21    FE2    C26      90.000    3.000
+ FC6      C22    FE2    C26     180.000    3.000
+ FC6      C24    FE2    C23      90.000    3.000
+ FC6      C21    FE2    C23     180.000    3.000
+ FC6      C22    FE2    C23      90.000    3.000
+ FC6      C26    FE2    C23      90.000    3.000
+ FC6      FE2    C24    N24     180.000    3.000
+ FC6      FE2    C21    N25     180.000    3.000
+ FC6      FE2    C22    N22     180.000    3.000
+ FC6      FE2    C26    N21     180.000    3.000
+ FC6      FE2    C23    N23     180.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FC6      var_1            N11    C11    FE2    C24              180.000           20.000   1
+ FC6      var_2            N24    C24    FE2    C11              180.000           20.000   1
+ FC6      var_3            N25    C21    FE2    C11              180.000           20.000   1
+ FC6      var_4            N22    C22    FE2    C11              180.000           20.000   1
+ FC6      var_5            N21    C26    FE2    C11              180.000           20.000   1
+ FC6      var_6            N23    C23    FE2    C11              180.000           20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+_chem_comp_chir.atom_id_4
+_chem_comp_chir.atom_id_5
+_chem_comp_chir.atom_id_6
+_chem_comp_chir.atom_id_7
+_chem_comp_chir.atom_id_8
+ FC6      chir_01          FE2    C11    C24    C21       cross4
+                   C22    C23    C26    .      .
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MODIFICATIONS ---
+#
+data_mod_TRPmod1
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ TRPmod1  change   CD1    .      .    CH1     0.000
+ TRPmod1  delete   HD1    .      .    .       0.000
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+ TRPmod1  delete   CD1     HD1       single      0.000    0.020
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+ TRPmod1  delete   HD1     CD1     NE1       0.000    3.000
+ TRPmod1  delete   HD1     CD1     HD11      0.000    3.000
+ TRPmod1  delete   CG      CD1     HD1       0.000    3.000
+#
+data_mod_HISmod1
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ HISmod1  change   NE2    .      .    NT      0.000
+ HISmod1  delete   HE2    .      .    .       0.000
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+ HISmod1  delete   NE2     HE2       single      0.000    0.020
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+ HISmod1  delete   HE2     NE2     CD2       0.000    3.000
+ HISmod1  delete   CE1     NE2     HE2       0.000    3.000
+# ------------------------------------------------------
