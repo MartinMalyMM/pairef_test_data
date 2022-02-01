@@ -1,0 +1,2 @@
+refinement.pdb_interpretation.allow_polymer_cross_special_position=True
+refinement.input.xray_data.labels=AUTOMATIC_DEFAULT_free_R.mtz:IMEAN,SIGIMEAN
