@@ -14,5 +14,6 @@ You can try to run these commands:
    cctbx.python -m pairef --HKLIN TL_AUTOMATIC_DEFAULT_free_R.mtz --XYZIN TL_3n21_edit05_refmac1_shaken.mmcif -u TL_AUTOMATIC_DEFAULT_scaled_unmerged.mtz -i 1.80 -r 1.70,1.60,1.50 -p TL_cif_refmac --refmac --flag 2
    cctbx.python -m pairef --HKLIN TL_AUTOMATIC_DEFAULT_free_R.mtz --XYZIN TL_3n21_edit05_refmac1_shaken.cif -u TL_AUTOMATIC_DEFAULT_scaled_unmerged.mtz -i 1.8 -r 1.70,1.60,1.50 -p TL_cif_phenix --phenix --flag 2 --def TL_setting.def
    cctbx.python -m pairef --HKLIN hse11_2-45A.mtz --XYZIN hse11_2-90A.pdb -u hse11_XDS_ASCII.HKL -i 2.9 -r 2.70,2.45 -p hse11 --phenix
+   cctbx.python -m pairef --HKLIN 8OLA-sf.mtz --XYZIN 8OLA_ADP15.mmcif -i 1.60 -r 1.40 -p 8OLA_five_letter --libin 8OLA_A1H69.cif --prerefinement-ncyc 10 --refmac
 
 All the automatic tests can be run using pytest - more information is available in the PAIREF documentation: https://pairef.fjfi.cvut.cz/docs/test.html
